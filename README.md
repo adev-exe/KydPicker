@@ -1,4 +1,5 @@
 # Keyboard Part Picker
+## Final Project
 ## Team Members 
 - Arturo Calderon
 - Jan Andre Verceles-Zara 
