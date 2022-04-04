@@ -9,11 +9,38 @@
 
 Install dependencies:
 ```shell
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Usage
 Run the following in console:
 ```shell
+python main.py
+```
+
+## How to run on mac (M1)
+
+```
+pip install virtualenv
+```
+
+```
+virtualenv flask
+```
+
+```
+cd flask
+```
+
+```
+source bin/activate
+```
+
+```
+pip install flask
+```
+
+## Run
+```
 python main.py
 ```
