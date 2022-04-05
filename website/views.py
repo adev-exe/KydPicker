@@ -9,3 +9,7 @@ views = Blueprint('views',__name__)
 def home():
     return render_template("base.html", title = "Keyboard Part Picker")
 
+
+@views.route('/bulidGuide.html')
+def bulid_guide():
+    return render_template("bulidGuide.html", title = "Start Build")
