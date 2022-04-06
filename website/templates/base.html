@@ -14,9 +14,33 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body> 
+<body>
     {% include 'navBar.html' %}
-    <h1>Home Page</h1>
+
+    <div class="container-xl mx-auto py-3">
+        <div class="row g-2 py-5">
+            <div class="col-sm-6 mx-auto text-center">
+                <h3 class="py-5"> About </h3>
+                <p>KBDpartpicker is a website catered to both beginners and enthusiasts alike! It is our goal to
+                    introduce
+                    and make getting into the hobby of keyboard building as seamless a process as possible. If you are a
+                    newcomer,
+                    we suggest you click the “Build Guide” button on the navigation bar, otherwise if you are ready to
+                    get to building,
+                    feel free to click on the “Start a build” button. Either way, enjoy, and we hope you stick with it.
+                </p>
+
+                <div class="container-xl mx-auto">
+                    <button class="btn btn-dark me-2 text-white" style="background-color: #237405;" type="button"
+                    onclick="window.location.href='bulidGuide.html'"> Start Bulid</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 mx-auto ps-5">
+                <img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='img/keyboard_pic.jpeg')}}" alt="keyboard" >
+            </div>
+    </div>
+   
 
 </body>
 
