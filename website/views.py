@@ -13,3 +13,9 @@ def home():
 @views.route('/bulidGuide.html')
 def bulid_guide():
     return render_template("bulidGuide.html", title = "Start Build")
+
+@views.route('/inspiration.html')
+def inspiration():
+    return render_template("inspiration.html", title = "Inspiration")
+
+
