@@ -69,5 +69,5 @@ def bulid_page():
     return render_template("bulidPage.html", title="Build Page",)
 
 @views.route('/teamMem.html')
-def bulid_page():
+def team_member():
     return render_template("teamMem.html", title="Team Member Page",)
