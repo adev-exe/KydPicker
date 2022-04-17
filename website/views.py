@@ -1,5 +1,5 @@
 from flask import (
-    Blueprint, render_template
+    Blueprint, render_template, url_for
 )
 
 views = Blueprint('views', __name__)
@@ -71,3 +71,7 @@ def bulid_page():
 @views.route('/teamMem.html')
 def team_member():
     return render_template("teamMem.html", title="Team Member Page",)
+
+@views.route('partsSelection/pcb.html')
+def pcb():
+    return render_template("partsSelection/pcb.html", title="PCB Page",)
