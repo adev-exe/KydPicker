@@ -54,7 +54,8 @@ def bulid_guide():
         market right now.
     '''
 
-    images =  ['img/pcb.jpeg', 'img/case.jpeg', 'img/plate.jpeg', 'img/stabs.jpeg', 'img/switches.jpeg', 'img/kcps.jpeg']
+    images = ['img/pcb.jpeg', 'img/case.jpeg', 'img/plate.jpeg',
+              'img/stabs.jpeg', 'img/switches.jpeg', 'img/kcps.jpeg']
     paragraph = [pcb, case, plate, stabilizers, switches, keycaps]
     return render_template("bulidGuide.html", title="Build Guide", paragraph=paragraph, images=images)
 
@@ -68,10 +69,37 @@ def inspiration():
 def bulid_page():
     return render_template("bulidPage.html", title="Build Page",)
 
+
 @views.route('/teamMem.html')
 def team_member():
     return render_template("teamMem.html", title="Team Member Page",)
 
+
 @views.route('partsSelection/pcb.html')
 def pcb():
     return render_template("partsSelection/pcb.html", title="PCB Page",)
+
+
+@views.route('partsSelection/case.html')
+def case():
+    return render_template("partsSelection/case.html", title="Case Page",)
+
+
+@views.route('partsSelection/plate.html')
+def plate():
+    return render_template("partsSelection/plate.html", title="Plate Page",)
+
+
+@views.route('partsSelection/stabilizers.html')
+def stabilizers():
+    return render_template("partsSelection/stabilizers.html", title="Stabilizers Page",)
+
+
+@views.route('partsSelection/switches.html')
+def switches():
+    return render_template("partsSelection/switches.html", title="Switches Page",)
+
+
+@views.route('partsSelection/keycaps.html')
+def keycaps():
+    return render_template("partsSelection/keycaps.html", title="Keycaps Page",)
