@@ -10,6 +10,22 @@
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
+.artName{
+    position: absolute;
+    width: 420px;
+    height: 40px;
+    left: 35.5%;
+    top:7%;
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 58px;
+    text-align: center;
+
+    color: #000000;
+}
 .artTag{
     box-sizing: border-box;
     background: #BFE7B8;
@@ -21,6 +37,22 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+}
+.mirName{
+    position: absolute;
+    width: 420px;
+    height: 40px;
+    left: 93px;
+    top: 7%;
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 58px;
+    text-align: center;
+
+    color: #000000;
 }
 .mir{
     border: 8px solid #000000;
@@ -55,6 +87,23 @@
     left: 57%;
     transform: translate(50%, -50%) 
 }
+.janName{
+    position: absolute;
+    width: 420px;
+    height: 40px;
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+    top: 9%;
+    left: 50%;
+    transform: translate(50%, -50%);
+
+    color: #000000;
+}
 .janTag{
     box-sizing: border-box;
     background: #FFCEAB;
@@ -70,5 +119,123 @@
     position: relative;
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
+/*MOBILE*/
+@media screen and (max-width: 40.5em) {
+    .mir {
+        position: absolute;
+        width: 180px;
+        height: 259px;
+        left: 118px;
+        top:25%;
+        
+        border: 8px solid #000000;
+        box-sizing: border-box;
+        border-radius: 40px;
+    }
+    .mirTag{
+        position: absolute;
+        width: 180px;
+        height: 52px;
+        left: 118px;
+        top:12%;
+
+        background: #8FC8FD;
+        border-radius: 40px 40px 0px 0px;
+    }
+    .art {
+        position: absolute;
+        width: 180px;
+        height: 259px;
+        left: 41.5%;
+        top: 70%;
+
+        border: 8px solid #000000;
+        box-sizing: border-box;
+        border-radius: 40px;
+    }
+    .artTag{
+        position: absolute;
+        width: 180px;
+        height: 52px;
+        left: 41.5%;
+        top:57%;
+
+        background: #BFE7B8;
+        border-radius: 40px 40px 0px 0px;
+    }
+    .mirName{
+        position: absolute;
+        width: 185px;
+        height: 13px;
+        left: 115px;
+        top: 8%;
+
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+
+        color: #000000;
+    }
+    .artName{
+        position: absolute;
+        width: 420px;
+        height: 40px;
+        left: -2px;
+        top: 53%;
+
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+
+        color: #000000;
+    }
+    .jan{
+        position: absolute;
+        width: 180px;
+        height: 259px;
+
+        border: 8px solid #000000;
+        box-sizing: border-box;
+        border-radius: 40px;
+        top: 115%;
+        left: 5%;
+        transform: translate(50%, -50%)
+    }
+    .janTag{
+        position: absolute;
+        width: 180px;
+        height: 52px;
+
+        background: #FFCEAB;        
+        border-radius: 40px 40px 0px 0px;
+        top: 101%;
+        left: 5%;
+        transform: translate(50%, -50%)
+    }
+    .janName{
+        position: absolute;
+        width: 191px;
+        height: 14px;
+
+        font-family: 'Karla';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 22px;
+        text-align: center;
+
+        color: #000000;
+
+        top: 97%;
+        left: 4%;
+        transform: translate(50%, -50%)
+
+    }
+  }
