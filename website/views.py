@@ -14,44 +14,52 @@ def home():
 @views.route('/bulidGuide.html')
 def bulid_guide():
     pcb = '''
-    The PCB is the most important part of the keyboard. It is what gives the keyboard life. When trying to come up with a build,
-                   'there are centain sizes of PCB that we recommend to stick to, '
-                   ' 60 % , 75%, 80 % , 90%, and 100%. The reason for this is that these sizes have the most support and components on '
-                   'the market right now. In addition to thinking about the size of the PCB, you must think about the '
-                   'type of PCB you want for your build. For the beginner level, we suggest a Hot-Swappable PCB as there '
-                   ' is no soldering at all. If you fancy yourself handy with electronics then you can either go for a '
-                   'Standard PCB or a Through-hole PCB. The Standard only requires you to solder the switches and the '
-                   'Through-hole requires you to solder everything from diodes to the USB connector.'
-                   'paragraph = for r in paragraph
-                   '''
+        The PCB is the most important part of the keyboard. It is what gives the keyboard life. When trying to come up with a build,
+        there are centain sizes of PCB that we recommend to stick to, 60 % , 75%, 80 % , 90%, and 100%. 
+        The reason for this is that these sizes have the most support and components on the market right now. In addition 
+        to thinking about the size of the PCB, you must think about the type of PCB you want for your build. 
+        For the beginner level, we suggest a Hot-Swappable PCB as there 
+        is no soldering at all. If you fancy yourself handy with electronics then you can either go for a 
+        Standard PCB or a Through-hole PCB. The Standard only requires you to solder the switches and the 
+        Through-hole requires you to solder everything from diodes to the USB connector.
+        '''
+        
     case = '''
         The Case is what holds all of the components and is one of the main factors that contributes the the
         sound generated from a keyboard. Cases come in many type of material such as plastic, wood, carbon
-        fiber, aluminium, etc.'''
+        fiber, aluminium, etc. As such whatever case you do choose will be impacted by whatever size of PCB you decide 
+        on so be wary when making this decision.
+        '''
 
     plate = '''
-        The Plate is the main part of the keyboard. It is what gives the keyboard life. When trying to come up with a build,
+        MAJOR NOTE: If you get 5-pin switches, a plate may not be necessary as these can be used for purely PCB mounted switch builds.
+        The Plate is a key component in how it will act together with the PCB and the Switches. It is a guard between the two so that if 
+        you were heavy-handed, your key presses would not affect the structure of the PCB. Plates are made in accompaniment with PCB's so
+        specific plates will only align with specific PCB's. Therefore, much like the case, the plate is also reliant on what choice of PCB
+        you have made. As for what plates are made of, they are generally going to be composed of aluminum, brass, polycarbonate, and carbon fiber.
     '''
 
     stabilizers = '''             
-      The PCB is the most important part of the keyboard. It is what gives the keyboard life. When trying
-      to come up with a build, there are centain sizes of PCB that we reccomend to stick to, 60%, 75%,
-      80%, 90%, and 100%. The for this is that these sizes have the most support and components on the
-      market right now.
+      Stabilizers are an auxillary part when it comes to a keyboard, but it is still vital to the functionality of the entire board.
+      They are a part that is essential when trying to have your keyboard sound good as well as keeping larger keys like SHIFT, ENTER, 
+      CTRL, and Spacebar stable.
       '''
 
     switches = '''
-    The PCB is the most important part of the keyboard. It is what gives the keyboard life. When trying
-     to come up with a build, there are centain sizes of PCB that we reccomend to stick to, 60%, 75%,
-                    80%, 90%, and 100%. The for this is that these sizes have the most support and components on the
-                    market right now.
+    The Switches are what interact with the PCB to make your key presses happen. Switches are made of a housing which can have 5 or 3 pins,
+    a spring that varies in weight to give the switch a particular feel, and the stem which works with the spring and housing to determine 
+    what feel and sound the switch will produce. With switches there are three profiles that you can choose from, these are based on the sound 
+    and feeling that they create. There is Linear which is where the switch is quieter and the press is smooth with little to no feedback, Tactile 
+    which gives you a bit of press feedback and some sound, and Clicky which focuses on giving you press feedback and a particularly "clicky" sound.
     '''
 
     keycaps = ''' 
-        The PCB is the most important part of the keyboard. It is what gives the keyboard life. When trying
-        to come up with a build, there are centain sizes of PCB that we reccomend to stick to, 60%, 75%,
-        80%, 90%, and 100%. The for this is that these sizes have the most support and components on the
-        market right now.
+        The Keycaps are the primary aesthetic builder when it comes to keyboard building. They are what makes you keyboard look good and are generally
+        what theme or personality your build has. When finding keycaps, it is important that you know which kind of layout your PCB is set in. There are 
+        two layouts that you as a builder/hobbyist will need to keep in mind, ANSI and ISO. The main difference between the two is the Enter key, but there 
+        other minor differences as well. For an ANSI board the Enter key is a normal rectangle whereas for an ISO board the Enter is an upside-down "L". 
+        In addition to layout, keycaps are offered in different material and profiles. The materials they are made of determine their feel and look and the
+        profile they have determine the flatness or concavity of the keycap. 
     '''
 
     images = ['img/pcb.jpeg', 'img/case.jpeg', 'img/plate.jpeg',
