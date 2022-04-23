@@ -38,6 +38,19 @@
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
+.aC{
+    position: absolute;
+    width: 250px;
+    height: 73px;
+    left: 595px;
+    top: 301px;
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 35px;
+}
 .mirName{
     position: absolute;
     width: 420px;
@@ -75,6 +88,19 @@
     top: 15%;
     left: 10%;
     transform: translate(0, -50%)
+}
+.mC{
+    position: absolute;
+    width: 250px;
+    height: 73px;
+    left: 180px;
+    top: 301px;
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 35px;
 }
 .jan{
     border: 8px solid #000000;
@@ -114,6 +140,19 @@
     top: 15%;
     left: 57%;
     transform: translate(50%, -50%) 
+}
+.jC{
+    position: absolute;
+    width: 250px;
+    height: 73px;
+    left: 1010px;
+    top: 301px;
+
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 35px;
 }
 .body{
     position: relative;
