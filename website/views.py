@@ -1,9 +1,18 @@
+import imp
 from flask import (
     Blueprint, render_template, url_for
 )
+import util
 
 views = Blueprint('views', __name__)
 
+
+# credidatials
+username = 'me'
+password = 'test'
+host = '127.0.0.1'
+port = '5432'
+database = 'KybPartPickerInventory'
 
 @views.route('/')
 @views.route('/base.html')
@@ -90,7 +99,27 @@ def pcb():
 
 @views.route('partsSelection/case.html')
 def case():
-    return render_template("partsSelection/case.html", title="Case Page",)
+    cursor, connection = util.connect_to_db(
+        username, password, host, port, database)
+    # execute SQL commands
+    record = util.fetch_case(
+        cursor, sql_string="select case_name from product_case;")
+    if record == -1:
+        print('Something is wrong with the SQL command')
+    else:
+        # this will return all column names of the select result table
+        # col_names = [desc[0] for desc in cursor.description]
+        # only use the first five rows
+        # log = record[10]
+        #  print("test”)I
+        log = record
+
+        print(log)
+        # log=[[1,2],[3,4]]
+    # disconnect from database
+    # print('Works')
+    util.disconnect_from_db(connection, cursor)
+    return render_template("partsSelection/case.html", title="Case Page", case_name=log)
 
 
 @views.route('partsSelection/plate.html')
