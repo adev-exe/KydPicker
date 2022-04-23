@@ -143,6 +143,18 @@
         background: #8FC8FD;
         border-radius: 40px 40px 0px 0px;
     }
+    .mC{
+        position: absolute;
+        width: 142px;
+        height: 22px;
+        left: 136px;
+        top: 140px;
+        
+        font-family: 'Karla';
+        font-style: normal;
+        font-size: 9px;
+        line-height: 15px; 
+    }
     .art {
         position: absolute;
         width: 180px;
@@ -163,6 +175,18 @@
 
         background: #BFE7B8;
         border-radius: 40px 40px 0px 0px;
+    }
+    .aC{
+        position: absolute;
+        width: 142px;
+        height: 22px;
+        left: 136px;
+        top: 470px;
+        
+        font-family: 'Karla';
+        font-style: normal;
+        font-size: 9px;
+        line-height: 15px; 
     }
     .mirName{
         position: absolute;
@@ -236,6 +260,17 @@
         top: 97%;
         left: 4%;
         transform: translate(50%, -50%)
-
+    }
+    .jC{
+        position: absolute;
+        width: 142px;
+        height: 22px;
+        left: 136px;
+        top: 790px;
+        
+        font-family: 'Karla';
+        font-style: normal;
+        font-size: 9px;
+        line-height: 15px; 
     }
   }
