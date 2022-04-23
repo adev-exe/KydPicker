@@ -14,6 +14,7 @@ host = '127.0.0.1'
 port = '5432'
 database = 'KybPartPickerInventory'
 
+
 @views.route('/')
 @views.route('/base.html')
 def home():
@@ -32,7 +33,7 @@ def bulid_guide():
         Standard PCB or a Through-hole PCB. The Standard only requires you to solder the switches and the 
         Through-hole requires you to solder everything from diodes to the USB connector.
         '''
-        
+
     case = '''
         The Case is what holds all of the components and is one of the main factors that contributes the the
         sound generated from a keyboard. Cases come in many type of material such as plastic, wood, carbon
@@ -112,9 +113,10 @@ def case():
         # only use the first five rows
         # log = record[10]
         #  print("test”)I
-        log = record
+        log = []
+        for i in record:
+            log.append(i)
 
-        print(log)
         # log=[[1,2],[3,4]]
     # disconnect from database
     # print('Works')

@@ -42,6 +42,8 @@ def fetch_case(cursor, sql_string="select case_name from product_case;"):
         # record = cursor.fetchone()
         # print("You are connected to - ", record, "\n")
         record = cursor.fetchall()
+        # for i in record:
+        #     log = i
         # print("Here are the first 5 rows", record[:5])
         return record
         

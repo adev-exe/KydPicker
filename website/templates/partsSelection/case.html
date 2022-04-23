@@ -32,19 +32,20 @@
                         <th> </th>
                     </tr>
                 </thead>
+                {% for i in case_name %}
                 <tbody>
-                    {% for i in case_name %}
                     <tr>
-                        <td>{{ case_name }}</td>
+                        <td>{{i}}</td>
                         <td>PRICE/ITEM</td>
                         <td>
                             <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
                                 type="button" onclick="window.location.href=' {{ url_for('views.pcb') }} '"> + Add
                             </button>
                         </td>
-                        {% endfor %}
                     </tr>
                 </tbody>
+                {% endfor %}
+
             </table>
         </div>
     </div>
