@@ -78,10 +78,6 @@ def bulid_guide():
     return render_template("bulidGuide.html", title="Build Guide", paragraph=paragraph, images=images)
 
 
-@views.route('/inspiration.html')
-def inspiration():
-    return render_template("inspiration.html", title="Inspiration",)
-
 
 @views.route('/bulidPage.html')
 def bulid_page():

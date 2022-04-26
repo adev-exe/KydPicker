@@ -7,15 +7,14 @@
             KDBPartPicker
         </a>
         <button class="btn btn-dark me-2 text-white" style="background-color: #237405;" type="button"
-            onclick="window.location.href=' {{ url_for('views.inspiration') }}'">Inspiration
-
+            onclick="window.location.href='{{ url_for('views.bulid_guide')}}'">Build Guide
+        </button>
+        <button class="btn btn-dark me-2 text-white" style="background-color: #237405;" type="button"
+            onclick="window.location.href=' {{ url_for('views.bulid_page') }}'">Current Build
         </button>
         <button class="btn btn-dark me-2 text-white" style="background-color: #237405;" type="button"
             onclick="window.location.href='{{url_for('views.team_member')}}'">Team Members
         </button>
-        <button class="btn btn-dark me-2 text-white" style="background-color: #237405;" type="button"
-            onclick="window.location.href='{{ url_for('views.bulid_guide')}}'">Build Guide
-
-        </button>
+        
     </form>
 </nav>
