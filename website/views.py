@@ -89,7 +89,29 @@ def team_member():
 
 @views.route('partsSelection/pcb.html')
 def pcb():
-    return render_template("partsSelection/pcb.html", title="PCB Page",)
+    cursor, connection = util.connect_to_db(
+        username, password, host, port, database)
+    # execute SQL commands
+    record = util.fetch_case(
+        cursor, sql_string="select pcb_name from product_pcb;")
+    if record == -1:
+        print('Something is wrong with the SQL command')
+    else:
+        # this will return all column names of the select result table
+        # col_names = [desc[0] for desc in cursor.description]
+        # only use the first five rows
+        # log = record[10]
+        #  print("test”)I
+        log = []
+        for i in record:
+            log.append(i)
+
+        # log=[[1,2],[3,4]]
+    # disconnect from database
+    # print('Works')
+    util.disconnect_from_db(connection, cursor)
+    
+    return render_template("partsSelection/pcb.html", title="PCB Page", pcb_name=log)
 
 
 @views.route('partsSelection/case.html')
@@ -120,19 +142,103 @@ def case():
 
 @views.route('partsSelection/plate.html')
 def plate():
-    return render_template("partsSelection/plate.html", title="Plate Page",)
+    cursor, connection = util.connect_to_db(
+        username, password, host, port, database)
+    # execute SQL commands
+    record = util.fetch_case(
+        cursor, sql_string="select plate_name from product_plate;")
+    if record == -1:
+        print('Something is wrong with the SQL command')
+    else:
+        # this will return all column names of the select result table
+        # col_names = [desc[0] for desc in cursor.description]
+        # only use the first five rows
+        # log = record[10]
+        #  print("test”)I
+        log = []
+        for i in record:
+            log.append(i)
+
+        # log=[[1,2],[3,4]]
+    # disconnect from database
+    # print('Works')
+    util.disconnect_from_db(connection, cursor)
+    return render_template("partsSelection/plate.html", title="Plate Page", plate_name=log)
 
 
 @views.route('partsSelection/stabilizers.html')
 def stabilizers():
-    return render_template("partsSelection/stabilizers.html", title="Stabilizers Page",)
+    cursor, connection = util.connect_to_db(
+        username, password, host, port, database)
+    # execute SQL commands
+    record = util.fetch_case(
+        cursor, sql_string="select stabilizer_name from product_stabilizers;")
+    if record == -1:
+        print('Something is wrong with the SQL command')
+    else:
+        # this will return all column names of the select result table
+        # col_names = [desc[0] for desc in cursor.description]
+        # only use the first five rows
+        # log = record[10]
+        #  print("test”)I
+        log = []
+        for i in record:
+            log.append(i)
+
+        # log=[[1,2],[3,4]]
+    # disconnect from database
+    # print('Works')
+    util.disconnect_from_db(connection, cursor)
+    return render_template("partsSelection/stabilizers.html", title="Stabilizers Page",stabilizer_name=log)
 
 
 @views.route('partsSelection/switches.html')
 def switches():
-    return render_template("partsSelection/switches.html", title="Switches Page",)
+    cursor, connection = util.connect_to_db(
+        username, password, host, port, database)
+    # execute SQL commands
+    record = util.fetch_case(
+        cursor, sql_string="select switches_name from product_switches;")
+    if record == -1:
+        print('Something is wrong with the SQL command')
+    else:
+        # this will return all column names of the select result table
+        # col_names = [desc[0] for desc in cursor.description]
+        # only use the first five rows
+        # log = record[10]
+        #  print("test”)I
+        log = []
+        for i in record:
+            log.append(i)
+
+        # log=[[1,2],[3,4]]
+    # disconnect from database
+    # print('Works')
+    util.disconnect_from_db(connection, cursor)
+    return render_template("partsSelection/switches.html", title="Switches Page",switch_name=log)
 
 
 @views.route('partsSelection/keycaps.html')
 def keycaps():
-    return render_template("partsSelection/keycaps.html", title="Keycaps Page",)
+    cursor, connection = util.connect_to_db(
+        username, password, host, port, database)
+    # execute SQL commands
+    record = util.fetch_case(
+        cursor, sql_string="select keycaps_name from product_keycaps;")
+    if record == -1:
+        print('Something is wrong with the SQL command')
+    else:
+        # this will return all column names of the select result table
+        # col_names = [desc[0] for desc in cursor.description]
+        # only use the first five rows
+        # log = record[10]
+        #  print("test”)I
+        log = []
+        for i in record:
+            log.append(i)
+
+        # log=[[1,2],[3,4]]
+    # disconnect from database
+    # print('Works')
+    util.disconnect_from_db(connection, cursor)
+    return render_template("partsSelection/keycaps.html", title="Keycaps Page",keycap_name=log)

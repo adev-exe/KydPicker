@@ -30,63 +30,26 @@
                         <th> </th>
                     </tr>
                 </thead>
+
                 <tbody>
+                    {% for result in switch_name %}
                     <tr>
-                        <td>SELECTION</td>
+                        {% for elem in result %}
+                        <td>{{elem}}</td>
                         <td>PRICE/ITEM</td>
                         <td>
                             <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
-                                type="button" onclick="window.location.href=' {{ url_for('views.pcb') }} '"> + Add
+                                type="button" onclick="window.location.href=' {{ url_for('views.bulid_page') }} '"> + Add
                             </button>
                         </td>
+                        {% endfor %}
+
                     </tr>
-                    <tr>
-                        <td>SELECTION</td>
-                        <td>PRICE/ITEM</td>
-                        <td>
-                            <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
-                                type="button" onclick="window.location.href=' {{ url_for('views.pcb') }} '"> + Add
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                    <tr>
-                        <td>SELECTION</td>
-                        <td>PRICE/ITEM</td>
-                        <td>
-                            <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
-                                type="button" onclick="window.location.href=' {{ url_for('views.pcb') }} '"> + Add
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SELECTION</td>
-                        <td>PRICE/ITEM</td>
-                        <td>
-                            <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
-                                type="button" onclick="window.location.href=' {{ url_for('views.pcb') }} '"> + Add
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SELECTION</td>
-                        <td>PRICE/ITEM</td>
-                        <td>
-                            <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
-                                type="button" onclick="window.location.href=' {{ url_for('views.pcb') }} '"> + Add
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>SELECTION</td>
-                        <td>PRICE/ITEM</td>
-                        <td>
-                            <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
-                                type="button" onclick="window.location.href=' {{ url_for('views.pcb') }} '"> + Add
-                            </button>
-                        </td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
+
+
+        
             </table>
         </div>
     </div>
