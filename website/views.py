@@ -6,7 +6,6 @@ import util
 
 views = Blueprint('views', __name__)
 
-
 # credidatials
 username = 'me'
 password = 'test'
@@ -19,7 +18,6 @@ database = 'KybPartPickerInventory'
 @views.route('/base.html')
 def home():
     return render_template("base.html", title="Keyboard Part Picker")
-
 
 @views.route('/bulidGuide.html')
 def bulid_guide():
