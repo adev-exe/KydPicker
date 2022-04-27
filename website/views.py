@@ -93,7 +93,7 @@ def pcb():
         username, password, host, port, database)
     # execute SQL commands
     record = util.fetch_case(
-        cursor, sql_string="select pcb_name, pcb_price from product_pcb;")
+        cursor, sql_string="select pcb_name, pcb_url, pcb_price from product_pcb;")
     if record == -1:
         print('Something is wrong with the SQL command')
     else:
@@ -120,7 +120,7 @@ def case():
         username, password, host, port, database)
     # execute SQL commands
     record = util.fetch_case(
-        cursor, sql_string="select case_name, case_price from product_case;")
+        cursor, sql_string="select case_name, case_url, case_price from product_case;")
     if record == -1:
         print('Something is wrong with the SQL command')
     else:
@@ -146,7 +146,7 @@ def plate():
         username, password, host, port, database)
     # execute SQL commands
     record = util.fetch_case(
-        cursor, sql_string="select plate_name, plate_price from product_plate;")
+        cursor, sql_string="select plate_name, plate_url , plate_price from product_plate;")
     if record == -1:
         print('Something is wrong with the SQL command')
     else:
@@ -172,7 +172,7 @@ def stabilizers():
         username, password, host, port, database)
     # execute SQL commands
     record = util.fetch_case(
-        cursor, sql_string="select stabilizer_name, stabilizer_price from product_stabilizers;")
+        cursor, sql_string="select stabilizer_name, stabilizer_url ,stabilizer_price from product_stabilizers;")
     if record == -1:
         print('Something is wrong with the SQL command')
     else:
@@ -198,7 +198,7 @@ def switches():
         username, password, host, port, database)
     # execute SQL commands
     record = util.fetch_case(
-        cursor, sql_string="select switches_name, switches_price from product_switches;")
+        cursor, sql_string="select switches_name, switches_url , switches_price from product_switches;")
     if record == -1:
         print('Something is wrong with the SQL command')
     else:
@@ -224,7 +224,7 @@ def keycaps():
         username, password, host, port, database)
     # execute SQL commands
     record = util.fetch_case(
-        cursor, sql_string="select keycaps_name, keycaps_price from product_keycaps;")
+        cursor, sql_string="select keycaps_name, keycaps_url , keycaps_price from product_keycaps;")
     if record == -1:
         print('Something is wrong with the SQL command')
     else:
