@@ -1,6 +1,6 @@
 import imp
 from flask import (
-    Blueprint, render_template, url_for
+    Blueprint, render_template, url_for, request
 )
 import util
 
@@ -114,7 +114,7 @@ def pcb():
     return render_template("partsSelection/pcb.html", title="PCB Page", pcb_name=log)
 
 
-@views.route('partsSelection/case.html')
+@views.route('partsSelection/case.html', methods=('GET', 'POST'))
 def case():
     cursor, connection = util.connect_to_db(
         username, password, host, port, database)
@@ -130,14 +130,19 @@ def case():
         # log = record[10]
         #  print("test”)I
         log = []
+        index = 0
         for i in record:
             log.append(i)
+            # index +=1
 
+    if request.method == 'POST':
+        index = request.form['index']
+        print("request")
         # log=[[1,2],[3,4]]
     # disconnect from database
     # print('Works')
     util.disconnect_from_db(connection, cursor)
-    return render_template("partsSelection/case.html", title="Case Page", case_name=log)
+    return render_template("partsSelection/case.html", title="Case Page", case_name=log, index =index)
 
 
 @views.route('partsSelection/plate.html')
@@ -242,3 +247,7 @@ def keycaps():
     # print('Works')
     util.disconnect_from_db(connection, cursor)
     return render_template("partsSelection/keycaps.html", title="Keycaps Page",keycap_name=log)
+
+@views.route('currentBulid.html')
+def current_bulid():
+     return render_template("currentBulid.html", title="Current Build Page")

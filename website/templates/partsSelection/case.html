@@ -36,16 +36,29 @@
 
                 <tbody>
                     {% for result in case_name %}
+
                     <tr>
                         {% for elem in result %}
                         <td>{{elem}}</td>
-                        
                         {% endfor %}
-                        <td>
-                            <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
+
+                        <!-- <td> -->
+                            <!-- <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
                                 type="button" onclick="window.location.href=' {{ url_for('views.bulid_page') }} '"> +Add
-                            </button>
-                        </td>
+                            </button> -->
+                            <!-- <form method="post"> -->
+                                <!-- <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
+                                type="button" onclick="showResults()">{{loop.index}}</button>    -->
+                                <td>
+                                    <button class="btn btn-dark me-2 text-white" style="background-color: #237405;"
+                                        type="button" onclick="window.location.href=' {{ url_for('views.bulid_page') }} '"> +Add
+                                    </button>
+                                </td>
+      
+                            <!-- </form> -->
+                       
+                        <!-- </td> -->
+
                     </tr>
                     {% endfor %}
                 </tbody>
